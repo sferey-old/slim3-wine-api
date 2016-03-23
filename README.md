@@ -33,6 +33,10 @@ Installation de la BDD
 | DELETE | http://localhost:8080/v1/wines/{id} | DELETE FROM wine WHERE id=:id |
 | GET | http://localhost:8080/v1/wines/search?name=BODEGA |	SELECT * FROM wine WHERE name LIKE %BODEGA% ORDER BY name |
 
+## Les permissions d'accès HTTP
+
+[Contrôle d'accès HTTP](https://developer.mozilla.org/fr/docs/HTTP/Access_control_CORS)
+
 ## Article sur les API
 
 [Top 12 Best PHP RESTful Micro Frameworks (Pro/Con)](http://www.gajotres.net/best-available-php-restful-micro-frameworks/)
