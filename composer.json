@@ -1,0 +1,6 @@
+{
+    "name": "wine/api",
+    "require": {
+        "slim/slim": "^3.3"
+    }
+}
