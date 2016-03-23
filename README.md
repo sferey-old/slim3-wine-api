@@ -27,10 +27,10 @@ Installation de la BDD
 | ----- | --------- | --- |
 | GET | http://localhost:8080/ping |
 | GET | http://localhost:8080/v1/wines | SELECT * FROM wine ORDER BY name |
-| GET | http://localhost:8080/v1/wines/1 |	SELECT * FROM wine WHERE id=:id |
-| PUT | http://localhost:8080/v1/wines/1 | UPDATE wine SET name=:name, grapes=:grapes, country=:country, region=:region, year=:year, description=:description WHERE id=:id |
+| GET | http://localhost:8080/v1/wines/{id:[0-9]+} |	SELECT * FROM wine WHERE id=:id |
+| PUT | http://localhost:8080/v1/wines/{id} | UPDATE wine SET name=:name, grapes=:grapes, country=:country, region=:region, year=:year, description=:description WHERE id=:id |
 | POST | http://localhost:8080/v1/wines	| INSERT INTO wine (name, grapes, country, region, year, description) VALUES (:name, :grapes, :country, :region, :year, :description) |
-| DELETE | http://localhost:8080/v1/wines/1 | DELETE FROM wine WHERE id=:id |
+| DELETE | http://localhost:8080/v1/wines/{id} | DELETE FROM wine WHERE id=:id |
 | GET | http://localhost:8080/v1/wines/search?name=BODEGA |	SELECT * FROM wine WHERE name LIKE %BODEGA% ORDER BY name |
 
 ## Article sur les API
