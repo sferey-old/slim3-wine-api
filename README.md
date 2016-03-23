@@ -22,6 +22,16 @@ Installation de la BDD
 
 [http://localhost:8080/v1/install](http://localhost:8080/v1/install)
 
+## URL disponnible dans l'api
+| Method | URL | SQL |
+| ----- | --------- | --- |
+| GET | http://localhost:8080/ping |
+| GET | http://localhost:8080/v1/wines | SELECT * FROM wine ORDER BY name |
+| GET | http://localhost:8080/v1/wines/{id:[0-9]+} | SELECT * FROM wine WHERE id=:id |
+| PUT | http://localhost:8080/v1/wines/{id} | UPDATE wine SET ... WHERE id=:id |
+| POST | http://localhost:8080/v1/wines	| INSERT INTO wine (...) VALUES (...) |
+| DELETE | http://localhost:8080/v1/wines/{id} | DELETE FROM wine WHERE id=:id |
+| GET | http://localhost:8080/v1/wines/search?name=BODEGA |	SELECT * FROM wine WHERE name LIKE %BODEGA% ORDER BY name |
 
 ## Article sur les API
 
@@ -29,3 +39,6 @@ Installation de la BDD
 
 [Top 8 Java RESTful Micro Frameworks](http://www.gajotres.net/best-available-java-restful-micro-frameworks/)
 
+## Outils pour les API RESTful
+
+[Postman](https://www.getpostman.com/)
